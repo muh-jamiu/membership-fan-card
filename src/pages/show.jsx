@@ -9,7 +9,7 @@ export default function Show() {
     const [user, setUser] = useState(cookie.owner ??  "")
 
     useEffect(() => {
-        axios.get("/card")
+        axios.get("/card/get2")
         .then(res => {
             setdata(res.data.data)
             setloaded(true)

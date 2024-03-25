@@ -36,7 +36,7 @@ export default function Form() {
         e.preventDefault()
         var submitbtn = document.querySelector(".submitbtn")
         submitbtn.innerHTML =  `processing <div class="spinner-border spinner-border-sm"></div>`
-        axios.post("/card/create", {
+        axios.post("/card/create2", {
             name : name.current.value,
             email : email.current.value,
             age : age.current.value,

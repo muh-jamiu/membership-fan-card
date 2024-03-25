@@ -29,7 +29,7 @@ export default function Login() {
         e.preventDefault()
         var submitbtn = document.querySelector(".submitbtn")
         submitbtn.innerHTML =  `processing <div class="spinner-border spinner-border-sm"></div>`
-        axios.post("/user/owner", {
+        axios.post("/user/owner2", {
             password : password.current.value,
             email : email.current.value,
         })
