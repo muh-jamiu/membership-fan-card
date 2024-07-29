@@ -8,6 +8,7 @@ import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 const initialOptions = {
   "client-id": "Acsl2_Q9Lwqdftf_OsAfrQjaK6_kjl3bgg64uQxGxGAoeoP08nHYFzhanWrPQl_i0tBApXLAz9IVKLw2",
   currency: "USD",
+  intent: "capture",
 };
 
 ReactDOM.createRoot(document.getElementById('root')).render(
