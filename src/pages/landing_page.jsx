@@ -40,6 +40,7 @@ export default function Landing_page() {
         count += 1;
         setCount(count)
         setamount((50 * count).toFixed(2))
+        console.log(amount)
     }
     
     const decrememt = (count) => {
@@ -211,9 +212,9 @@ export default function Landing_page() {
                             </div>
 
                             <div className="d-flex order__ mb-3">
-                                <button className='btn btn-primary' onClick={() => decrememt(count1)}><i class="fa-solid fa-minus"></i></button>
-                                <p className="mb-0 mx-4">{count1}</p>
-                                <button className='btn btn-primary' onClick={() => incrememt(count1)}><i class="fa-solid fa-plus"></i></button>
+                                <button className='btn btn-primary' onClick={() => decrememt(count)}><i class="fa-solid fa-minus"></i></button>
+                                <p className="mb-0 mx-4">{count}</p>
+                                <button className='btn btn-primary' onClick={() => incrememt(count)}><i class="fa-solid fa-plus"></i></button>
                             </div>
 
                             {/* <button onClick={hoodyD} className="btn btn-primary mb-2">Purchase Hoody</button> */}
