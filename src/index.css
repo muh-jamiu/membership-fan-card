@@ -180,6 +180,17 @@ body{
     color: rgb(196, 196, 196);
 }
 
+.order__{
+    width: fit-content;
+    border: 1px solid white;
+    padding: .5em 1em;
+}
+
+.order__ button{
+    padding: .3em 1em;
+    border-radius: 1px;
+}
+
 .hoody {
     width: 90%;
     margin: auto auto;

@@ -5,6 +5,8 @@ import Footer from '../utils/footer';
 import { PayPalButtons } from '@paypal/react-paypal-js';
 
 export default function Landing_page() {
+    const [count, setCount] = useState(0)
+    const [amount, setamount] = useState(0)
     const onApprove = (data, actions) => {
         return actions.order.capture().then((details) => {
             Swal.fire({
@@ -13,18 +15,32 @@ export default function Landing_page() {
                 text: "Transaction was successfull",
               });
         });
-      };
+    };
     
-      const onError = (err) => {
-        console.error(err);
-        Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Something went wrong!",
-            footer: '<a href="#">Why do I have this issue?</a>'
-          });
-      };
+    const onError = (err) => {
+    console.error(err);
+    Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+        footer: '<a href="#">Why do I have this issue?</a>'
+        });
+    };
 
+    const incrememt = (count) => {
+        count += 1;
+        setCount(count)
+        setamount((50 * count).toFixed(2))
+        console.log(amount)
+    }
+    
+    const decrememt = (count) => {
+        if(count >= 1){
+            count -= 1;
+            setCount(count)
+            setamount(50 * count)
+        }
+    }
 
     const hoodyD = () => {
         Swal.fire({
@@ -148,9 +164,16 @@ export default function Landing_page() {
                     <div className="text">
                         <p className="mb-1 fw-semibold">Custom Hoody</p>
                         <div className="d-flex mb-2">
-                            <p className="fw-bold fs-1">$90.00</p>
-                            <p className="text-decoration-line-through disc mt-3 mx-2 text-mued">$100.00</p>
+                            <p className="fw-bold fs-1">$50.00</p>
+                            <p className="text-decoration-line-through disc mt-3 mx-2 text-mued">$99.99</p>
                         </div>
+
+                        <div className="d-flex order__ mb-3">
+                            <button className='btn btn-primary' onClick={() => decrememt(count)}><i class="fa-solid fa-minus"></i></button>
+                            <p className="mb-0 mx-4">{count}</p>
+                            <button className='btn btn-primary' onClick={() => incrememt(count)}><i class="fa-solid fa-plus"></i></button>
+                        </div>
+
                         {/* <button onClick={hoodyD} className="btn btn-primary mb-2">Purchase Hoody</button> */}
                         <PayPalButtons
                             style={{ layout: 'vertical' }}
@@ -158,7 +181,7 @@ export default function Landing_page() {
                                 return actions.order.create({
                                     purchase_units: [{
                                         amount: {
-                                            value: '90.00',
+                                            value: "50.00",
                                         },
                                     }],
                                 });
