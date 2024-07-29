@@ -3,6 +3,11 @@ import axios from '../axios'
 import Canvas from "../utils/canvas"
 import Footer from '../utils/footer';
 import { PayPalButtons } from '@paypal/react-paypal-js';
+import h1 from "../../public/h1.jpeg"
+import h2 from "../../public/h2.jpeg"
+import h3 from "../../public/h3.jpeg"
+import h4 from "../../public/h4.jpeg"
+import h5 from "../../public/h5.jpeg"
 
 export default function Landing_page() {
     const [count, setCount] = useState(0)
@@ -157,38 +162,172 @@ export default function Landing_page() {
 
             </div>
 
+            <h3 className="mb-3 fw-bold text-center">Purchase Custom <span className="text_color">Hoody</span></h3>
             <div className="hoody">
-                <h3 className="mb-3 fw-bold text-center">Purchase Custom <span className="text_color">Hoody</span></h3>
-                <div className="box">
-                    <img src="https://m.media-amazon.com/images/I/41tu6aekgjL._AC_UY1000_.jpg" alt="" />
-                    <div className="text">
-                        <p className="mb-1 fw-semibold">Custom Hoody</p>
-                        <div className="d-flex mb-2">
-                            <p className="fw-bold fs-1">$50.00</p>
-                            <p className="text-decoration-line-through disc mt-3 mx-2 text-mued">$99.99</p>
-                        </div>
+                <div className="d-flex">
+                    <div className="box">
+                        <img src={h1} alt="" />
+                        <div className="text">
+                            <p className="mb-1 fw-semibold">Custom Hoody</p>
+                            <div className="d-flex mb-2">
+                                <p className="fw-bold fs-1">$50.00</p>
+                                <p className="text-decoration-line-through disc mt-3 mx-2 text-mued">$99.99</p>
+                            </div>
 
-                        <div className="d-flex order__ mb-3">
-                            <button className='btn btn-primary' onClick={() => decrememt(count)}><i class="fa-solid fa-minus"></i></button>
-                            <p className="mb-0 mx-4">{count}</p>
-                            <button className='btn btn-primary' onClick={() => incrememt(count)}><i class="fa-solid fa-plus"></i></button>
-                        </div>
+                            <div className="d-flex order__ mb-3">
+                                <button className='btn btn-primary' onClick={() => decrememt(count)}><i class="fa-solid fa-minus"></i></button>
+                                <p className="mb-0 mx-4">{count}</p>
+                                <button className='btn btn-primary' onClick={() => incrememt(count)}><i class="fa-solid fa-plus"></i></button>
+                            </div>
 
-                        {/* <button onClick={hoodyD} className="btn btn-primary mb-2">Purchase Hoody</button> */}
-                        <PayPalButtons
-                            style={{ layout: 'vertical' }}
-                            createOrder={(data, actions) => {
-                                return actions.order.create({
-                                    purchase_units: [{
-                                        amount: {
-                                            value: "50.00",
-                                        },
-                                    }],
-                                });
-                            }}
-                            onApprove={onApprove}
-                            onError={onError}
-                        />
+                            {/* <button onClick={hoodyD} className="btn btn-primary mb-2">Purchase Hoody</button> */}
+                            <PayPalButtons
+                                style={{ layout: 'vertical' }}
+                                createOrder={(data, actions) => {
+                                    return actions.order.create({
+                                        purchase_units: [{
+                                            amount: {
+                                                value: "50.00",
+                                            },
+                                        }],
+                                    });
+                                }}
+                                onApprove={onApprove}
+                                onError={onError}
+                            />
+                        </div>
+                    </div>
+
+                    <div className="box">
+                        <img src={h2} alt="" />
+                        <div className="text">
+                            <p className="mb-1 fw-semibold">Custom Hoody</p>
+                            <div className="d-flex mb-2">
+                                <p className="fw-bold fs-1">$50.00</p>
+                                <p className="text-decoration-line-through disc mt-3 mx-2 text-mued">$99.99</p>
+                            </div>
+
+                            <div className="d-flex order__ mb-3">
+                                <button className='btn btn-primary' onClick={() => decrememt(count)}><i class="fa-solid fa-minus"></i></button>
+                                <p className="mb-0 mx-4">{count}</p>
+                                <button className='btn btn-primary' onClick={() => incrememt(count)}><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            {/* <button onClick={hoodyD} className="btn btn-primary mb-2">Purchase Hoody</button> */}
+                            <PayPalButtons
+                                style={{ layout: 'vertical' }}
+                                createOrder={(data, actions) => {
+                                    return actions.order.create({
+                                        purchase_units: [{
+                                            amount: {
+                                                value: "50.00",
+                                            },
+                                        }],
+                                    });
+                                }}
+                                onApprove={onApprove}
+                                onError={onError}
+                            />
+                        </div>
+                    </div>
+
+                    <div className="box">
+                        <img src={h3} alt="" />
+                        <div className="text">
+                            <p className="mb-1 fw-semibold">Custom Hoody</p>
+                            <div className="d-flex mb-2">
+                                <p className="fw-bold fs-1">$50.00</p>
+                                <p className="text-decoration-line-through disc mt-3 mx-2 text-mued">$99.99</p>
+                            </div>
+
+                            <div className="d-flex order__ mb-3">
+                                <button className='btn btn-primary' onClick={() => decrememt(count)}><i class="fa-solid fa-minus"></i></button>
+                                <p className="mb-0 mx-4">{count}</p>
+                                <button className='btn btn-primary' onClick={() => incrememt(count)}><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            {/* <button onClick={hoodyD} className="btn btn-primary mb-2">Purchase Hoody</button> */}
+                            <PayPalButtons
+                                style={{ layout: 'vertical' }}
+                                createOrder={(data, actions) => {
+                                    return actions.order.create({
+                                        purchase_units: [{
+                                            amount: {
+                                                value: "50.00",
+                                            },
+                                        }],
+                                    });
+                                }}
+                                onApprove={onApprove}
+                                onError={onError}
+                            />
+                        </div>
+                    </div>
+
+                    <div className="box">
+                        <img src={h4} alt="" />
+                        <div className="text">
+                            <p className="mb-1 fw-semibold">Custom Hoody</p>
+                            <div className="d-flex mb-2">
+                                <p className="fw-bold fs-1">$50.00</p>
+                                <p className="text-decoration-line-through disc mt-3 mx-2 text-mued">$99.99</p>
+                            </div>
+
+                            <div className="d-flex order__ mb-3">
+                                <button className='btn btn-primary' onClick={() => decrememt(count)}><i class="fa-solid fa-minus"></i></button>
+                                <p className="mb-0 mx-4">{count}</p>
+                                <button className='btn btn-primary' onClick={() => incrememt(count)}><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            {/* <button onClick={hoodyD} className="btn btn-primary mb-2">Purchase Hoody</button> */}
+                            <PayPalButtons
+                                style={{ layout: 'vertical' }}
+                                createOrder={(data, actions) => {
+                                    return actions.order.create({
+                                        purchase_units: [{
+                                            amount: {
+                                                value: "50.00",
+                                            },
+                                        }],
+                                    });
+                                }}
+                                onApprove={onApprove}
+                                onError={onError}
+                            />
+                        </div>
+                    </div>
+
+                    <div className="box">
+                        <img src={h5} alt="" />
+                        <div className="text">
+                            <p className="mb-1 fw-semibold">Custom Hoody</p>
+                            <div className="d-flex mb-2">
+                                <p className="fw-bold fs-1">$50.00</p>
+                                <p className="text-decoration-line-through disc mt-3 mx-2 text-mued">$99.99</p>
+                            </div>
+
+                            <div className="d-flex order__ mb-3">
+                                <button className='btn btn-primary' onClick={() => decrememt(count)}><i class="fa-solid fa-minus"></i></button>
+                                <p className="mb-0 mx-4">{count}</p>
+                                <button className='btn btn-primary' onClick={() => incrememt(count)}><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            {/* <button onClick={hoodyD} className="btn btn-primary mb-2">Purchase Hoody</button> */}
+                            <PayPalButtons
+                                style={{ layout: 'vertical' }}
+                                createOrder={(data, actions) => {
+                                    return actions.order.create({
+                                        purchase_units: [{
+                                            amount: {
+                                                value: "50.00",
+                                            },
+                                        }],
+                                    });
+                                }}
+                                onApprove={onApprove}
+                                onError={onError}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

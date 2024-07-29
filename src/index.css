@@ -200,10 +200,16 @@ body{
     margin-bottom: 2em;
     overflow: hidden;
     border-radius: 6px;
+    min-width: 300px;
+    margin-right: 2em;
 }
 
 .hoody .text{
     padding: 1em;
+}
+
+.hoody{
+    overflow: scroll;
 }
 
 .top .offcanvas-body a{
