@@ -4,6 +4,28 @@ import Canvas from "../utils/canvas"
 import Footer from '../utils/footer';
 
 export default function Landing_page() {
+
+    const hoodyD = () => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "Do you want to purchase this hoody!",
+            icon: "question",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, purchase it!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire({
+                title: "Purchased!",
+                text: "Your order has been scheduled.",
+                icon: "success"
+              });
+            }
+          });
+    }
+
+
     return (
       <div className="landing home">
 
@@ -27,9 +49,9 @@ export default function Landing_page() {
             <div className="box">
                 <div className="text">
                     <div className="p-4 mt-4">
-                        <h1 className='fw-bold'>March 3, 2024</h1>
-                        <p className="mb-1">Casino Center</p>
-                        <p className="">Barcelona, Spain</p>
+                        <h1 className='fw-bold'>August 03, 2024</h1>
+                        <p className="mb-1">BMO Stadium</p>
+                        <p className="">Los Angeles, CA</p>
                         <button className="btn"><a href="/enrollment">Purchase Card <i class="fa-solid fa-arrow-right"></i></a></button>
                     </div>
                 </div>
@@ -39,9 +61,9 @@ export default function Landing_page() {
             <div className="box">
                 <div className="text">
                     <div className="p-4 mt-4">
-                        <h1 className='fw-bold'>March 3, 2024</h1>
-                        <p className="mb-1">Casino Center</p>
-                        <p className="">Barcelona, Spain</p>
+                        <h1 className='fw-bold'>October 19, 2024</h1>
+                        <p className="mb-1">Austin TX</p>
+                        <p className="">Circuit of the America</p>
                         <button className="btn"><a href="/enrollment">Purchase Card <i class="fa-solid fa-arrow-right"></i></a></button>
                     </div>
                 </div>
@@ -98,9 +120,47 @@ export default function Landing_page() {
             
         </div>
 
+        <div className="hoody">
+            <h3 className="mb-3 fw-bold text-center">Purchase Custom <span className="text_color">Hoody</span></h3>
+            <div className="box">
+                <img src="https://m.media-amazon.com/images/I/41tu6aekgjL._AC_UY1000_.jpg" alt="" />
+               <div className="text">
+               <p className="mb-1 fw-semibold">Custom Hoody</p>
+                <div className="d-flex mb-2">
+                    <p className="fw-bold fs-1">$90.00</p>
+                    <p className="text-decoration-line-through disc mt-3 mx-2 text-mued">$100.00</p>
+                </div>
+                <button onClick={hoodyD} className="btn btn-primary mb-2">Purchase Hoody</button>
+               </div>
+            </div>
+        </div>
+
         <div className="section2">
             <h2 className="text-center fw-bold mb-3">Upcoming <span className="text_color">Events</span></h2>
             <div className="box">
+                <div className="text">
+                    <div className="p-4 mt-4">
+                        <h1 className='fw-bold'>August 03, 2024</h1>
+                        <p className="mb-1">BMO Stadium</p>
+                        <p className="">Los Angeles, CA</p>
+                        <button className="btn"><a href="/enrollment">Purchase Card <i class="fa-solid fa-arrow-right"></i></a></button>
+                    </div>
+                </div>
+                <img src="https://www.cssigniter.com/vip/solo/wp-content/uploads/sites/2/2014/09/event4-750x500.jpg" alt="" />
+            </div>
+
+            <div className="box">
+                <div className="text">
+                    <div className="p-4 mt-4">
+                        <h1 className='fw-bold'>October 19, 2024</h1>
+                        <p className="mb-1">Austin TX</p>
+                        <p className="">Circuit of the America</p>
+                        <button className="btn"><a href="/enrollment">Purchase Card <i class="fa-solid fa-arrow-right"></i></a></button>
+                    </div>
+                </div>
+                <img src="https://www.cssigniter.com/vip/solo/wp-content/uploads/sites/2/2014/09/event6.jpg" alt="" />
+            </div>
+            {/* <div className="box">
                 <div className="text">
                     <div className="p-4 mt-4">
                         <h1 className='fw-bold'>March 3, 2024</h1>
@@ -134,7 +194,7 @@ export default function Landing_page() {
                     </div>
                 </div>
                 <img src="https://www.cssigniter.com/vip/solo/wp-content/uploads/sites/2/2014/09/event3-750x500.jpg" alt="" />
-            </div>
+            </div> */}
         </div>
 
         
