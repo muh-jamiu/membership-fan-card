@@ -5,13 +5,7 @@ const ContactsPicker = () => {
 
   const handleGetContacts = async () => {
     if (!('contacts' in navigator) || !('select' in navigator.contacts)) {
-      alert('Contacts API not supported on this browser. \n ' + navigator.userAgent + '\n' + navigator.contacts + '\n' + navigator.userAgentData.platform + '\n' + navigator.userAgentData.mobile);
-      console.log(navigator)
-      console.log(navigator.contacts)
-      console.log(navigator.appCodeName)
-      console.log(navigator.appName)
-      console.log(navigator.userAgent)
-      console.log(navigator.userAgentData)
+      alert('Contacts API not supported on this browser.');
       return;
     }
 
